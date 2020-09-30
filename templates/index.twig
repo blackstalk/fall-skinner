@@ -113,9 +113,9 @@
 				<div class="product-col">
 					<div class="product-outer">
 						<div class="product-item">
-							<a href="{{ product.url }}" class="product-img" style="background-image:url({{ product.productImage.one().url }})"></a>
+							<a href="{{ product.productUrl }}" class="product-img" style="background-image:url({{ product.productImage.one().url }})"></a>
 							<div class="product-info">
-								<a href="{{ product.url }}">
+								<a href="{{ product.productUrl }}">
 									{{ product.title }}
 								</a>
 								{{ product.productDescription }}

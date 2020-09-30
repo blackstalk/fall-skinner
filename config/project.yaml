@@ -1,4 +1,4 @@
-dateModified: 1601413983
+dateModified: 1601501782
 email:
   fromEmail: philipp@rppld.co
   fromName: 'Craft CMS Project Starter'
@@ -409,6 +409,24 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\fields\Url
+  91862554-9b3e-40e3-b6d8-c16604a3321b:
+    contentColumnType: text
+    fieldGroup: e8fe68a9-4955-4f24-9534-cb4f8182de5c
+    handle: productUrl
+    instructions: ''
+    name: 'Product URL'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   978a314b-261b-44a3-911e-f450c6ac08e9:
     contentColumnType: string
     fieldGroup: f63ad89a-254d-4d4b-86c6-d73a3e689519
@@ -931,6 +949,9 @@ sections:
             tabs:
               -
                 fields:
+                  91862554-9b3e-40e3-b6d8-c16604a3321b:
+                    required: false
+                    sortOrder: 3
                   a2821172-0c74-4a17-a46c-e4d2d02ddcc4:
                     required: false
                     sortOrder: 1
