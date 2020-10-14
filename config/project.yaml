@@ -1,4 +1,4 @@
-dateModified: 1601501782
+dateModified: 1602701849
 email:
   fromEmail: philipp@rppld.co
   fromName: 'Craft CMS Project Starter'
@@ -378,6 +378,24 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  7e895879-2268-49b0-ab32-e9d2bf830bfe:
+    contentColumnType: text
+    fieldGroup: ad07ebe9-076c-45fc-905a-ce7123e08282
+    handle: headScripts
+    instructions: ''
+    name: 'Head Scripts'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '8'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   85d2dd3a-292c-4ae2-af02-a4dd0b8574e9:
     contentColumnType: text
     fieldGroup: f5d2f46e-65de-498b-b8cd-03575e8f7fc6
@@ -621,6 +639,24 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  bec0dce3-c8c3-4052-aa00-98b45e1b6942:
+    contentColumnType: text
+    fieldGroup: ad07ebe9-076c-45fc-905a-ce7123e08282
+    handle: bodyScripts
+    instructions: ''
+    name: 'Body Scripts'
+    searchable: true
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: '1'
+      columnType: null
+      initialRows: '8'
+      multiline: '1'
+      placeholder: ''
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
   c652fd75-0e7f-4077-b9a8-bda5f6a37bb0:
     contentColumnType: text
     fieldGroup: f5d2f46e-65de-498b-b8cd-03575e8f7fc6
@@ -914,6 +950,16 @@ globalSets:
                 sortOrder: 2
             name: Identity
             sortOrder: 1
+          -
+            fields:
+              7e895879-2268-49b0-ab32-e9d2bf830bfe:
+                required: false
+                sortOrder: 1
+              bec0dce3-c8c3-4052-aa00-98b45e1b6942:
+                required: false
+                sortOrder: 2
+            name: Scripts
+            sortOrder: 2
     handle: globals
     name: Globals
 plugins:
