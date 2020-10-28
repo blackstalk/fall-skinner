@@ -27,32 +27,12 @@ new Vue({
     printPage(){
       window.print();
     },
-    toggleHeroCopy(){
-      let button = document.querySelector('.hero-read-more');
-      let container = document.querySelector('.toggle-container');
-      if (!container.classList.contains('active')) {
-          container.classList.add('active');
-          button.classList.add('active');
-          container.style.height = 'auto';
-
-          let height = container.clientHeight + "px";
-
-          container.style.height = '0px';
-
-          setTimeout(function () {
-              container.style.height = height;
-          }, 0);
-      } else {
-          container.style.height = '0px';
-
-          container.addEventListener('transitionend', function () {
-              container.classList.remove('active');
-              button.classList.remove('active');
-          }, {
-              once: true
-          });
-      }
+    scrollToRecipes(){
+      document.getElementById('scroll-here-plz').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
     },
+    goHome(){
+      window.location.href='/';
+    }
     
   }
 })

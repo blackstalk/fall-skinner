@@ -21,44 +21,47 @@
 {% block main %}
 <section class="hero">
 	<div class="hero-dish-image">
-		<img alt="Dish" src="{{ entry.heroDishImage.one().url }}" />
+		<img src="{{ entry.heroDishImage.one().url }}" />
 	</div>
-	<div class="hero-product-image">
-		<img alt="Product" src="{{ entry.heroProductImage.one().url }}" />
-	</div>
-	<div class="hero-top" style="background-image:url('{{ entry.heroTexture.one().url }}')">
-		{% set rel = entry.heroHeadingImage.one() %}
-		{% if rel %}
-			<img alt="Fall in Love with soup again" src="{{ rel.url }}" />
-		{% endif %}
-	</div>
-	<div class="hero-bottom" style="background-image:url('{{ entry.heroTexture2.one().url }}')">
-		<div class="hero-bottom--container">
-			<div>
-				{{ entry.heroTopParagraph  }}
+	<div class="hero-top" style="background-image:url({{ entry.heroBackgroundImage.one().url }})">
+		<div class="hero-top-inner">
+			<div class="hero-top-title">
+				<img alt="Dish out the delish" src="{{ entry.heroHeadingImage.one().url }}" />
 			</div>
-			<div class="hero-bottom--button">
-				<button v-on:click="toggleHeroCopy" class="hero-read-more">Read More</button>
-			<div class="toggle-container">
-				{{ entry.heroBottomParagraph  }}
+			<div class="hero-top-hr hr-style-1"></div>
+			<div class="hero-top-copy">
+				<div class="hero-top-copy--product">
+					<img alt="Product" src="{{ entry.heroProductImage.one().url }}" />
+				</div>
+				<div class="hero-top-copy--copy">
+					{{ entry.heroTopParagraph }}
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="hero-footer" style="background-image:url('{{ globals.darkBackgroundImage.one().url }}')">
-		<div class="hero-footer-garnish"><img alt="Garnish" src="{{ entry.headerBarSupportingImage.one().url }}" /></div>
-		<span>See Recipes Below</span>
-		<button><img alt="See Recipes Below" src="{{ entry.iconImage.one().url }}"/></button>
+	<div class="hero-middle">
+		<div class="hero-middle-button">
+			<button v-on:click="scrollToRecipes">See Recipes Below</button>
+		</div>
+	</div>
+	<div class="hero-bottom" style="background-image:url({{ entry.headerBarBackgroundImage.one().url }})">
+		<figure>
+			<img alt="Mac and Cheese, Your Way" src="{{ entry.headerBarSupportingImage.one().url }}" />
+		</figure>
 	</div>
 </section>
-<section class="recipes">
+<section class="recipes" id="scroll-here-plz">
+
+	<div class="recipe-top-left"><img alt="Background Image 1" src="{{ entry.homeRecipeTopLeftImage.one().url }}"></div>
+	<div class="recipe-top-right"><img alt="Background Image 2" src="{{ entry.homeRecipeTopRightImage.one().url }}"></div>
+
 	<div class="recipes-heading">
-		<h2><span>Explore</span>Fall Soup Recipes</h2>
-		<div class="recipes-heading--leaf"></div>
+		<p>{{ entry.body }}</p>
 	</div>
 	<div class="recipes-grid">
 		<div class="recipe-row">
 			{% for recipe in craft.entries.section('recipes').all() %}
-				<div class="recipe-col" style="background-image:url('{{ globals.darkBackgroundImage.one().url }}')">
+				<div class="recipe-col">
 					<div class="recipe-outer">
 						<div class="recipe-item">
 							<a href="{{ recipe.url }}" class="recipe-img" style="background-image:url({{ recipe.recipeImage.one().url }})"></a>
@@ -76,37 +79,21 @@
 			{% endfor %}
 		</div>
 	</div>
-	<div class="recipes-garnish"><img alt="Garnish" src="{{ entry.headerBarSupportingImage.one().url }}" /></div>
-</section>
-<section class="info" style="background-image:url('{{ globals.darkBackgroundImage.one().url }}')">
-	<div class="info-container">
-		<div class="info-left">
-			<div class="info-left--heading">
-				<span>{{ entry.fpoSuperTitle }}</span>
-				<h2>{{ entry.fpoTitle }}</h2>
-			</div>
-			<div class="info-left--copy">
-				{{ entry.fpoCopy }}
-			</div>
-			
-		</div>
-		<div class="info-right">
-			<div class="info-right--image">
-				<figure>
-					<img alt="{{ entry.fpoTitle }}" src="{{ entry.fpoProductImage.one().url }}" />
-				</figure>
-			</div>
-		</div>
-	</div>
-	<div class="info-button">
-		<a style="background-image:url({{ entry.fpoButtonBg.one().url }})" href="{{ entry.fpoButtonLink }}">See Our Products</a>
-	</div>
-	<div class="info-bottom-garnish"><img alt="Garnish" src="{{ entry.headerBarSupportingImage.one().url }}" /></div>
+
+	<div class="recipe-bottom-left"><img alt="Background Image 3" src="{{ entry.homeRecipeBottomLeftImage.one().url }}"></div>
+	<div class="recipe-bottom-right"><img alt="Background Image 4" src="{{ entry.homeRecipeBottomRightImage.one().url }}"></div>
+	
 </section>
 
-<section class="products">
-	<h2>{{ entry.productsSectionTitle }}</h2>
-	<p>{{ entry.productsSectionCopy }}</p>
+<section class="yellow-divider" style="background-image:url({{ globals.yellowBg.one().url }})"></section>
+
+<section class="products" style="background-image:url({{ globals.darkBackgroundImage.one().url }})">
+	<div class="products-intro">
+		<h2>{{ entry.productsSectionTitle }}</h2>
+		<div class="products-hr hr-style-2"></div>
+		{{ entry.productsSectionCopy }}
+	</div>
+	
 	<div class="products-grid">
 		<div class="products-row">
 			{% for product in craft.entries.section('products').all() %}
@@ -128,11 +115,12 @@
 	</div>
 </section>
 
-<section class="footer">
-	<div class="footer-top" style="background-image:url('{{ entry.heroTexture2.one().url }}')">
-		<a href="{{ entry.footerCtaLink }}">{{ entry.footerCtaText }}</a>
-	</div>
-	<div class="footer-mid" style="background-image:url({{ entry.footerBackground.one().url }});">
+<section class="footer" style="background-image:url({{ entry.footerBackground.one().url }});">
+	<div class="footer-mid">
+		<div class="footer-cta">
+			<a href="{{ entry.footerCtaLink }}">{{ entry.footerCtaText }}</a>
+			<div class="footer-hr hr-style-2"></div>
+		</div>
 		<figure>
 			<img alt="Footer Logo" src="{{ entry.footerLogo.one().url }}" />
 		</figure>

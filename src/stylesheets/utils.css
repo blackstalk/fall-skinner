@@ -3,6 +3,18 @@
     sans-serif;
 }
 
+.mx-auto {
+  margin: 0 auto;
+}
+
+.toggle-container {
+  transition: height .25s ease;
+  overflow: hidden;
+}
+.toggle-container:not(.active) {
+  display: none;
+}
+
 .bg-app-green {
   background-color: #59e9df;
   color: #000;

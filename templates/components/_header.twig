@@ -1,14 +1,13 @@
 <!-- Navigation -->
 {% if entry.section == 'Recipes' %}
-<nav class="dark-nav" style="background-image:url(/{{ globals.darkBackgroundImage.one().url }})">
+<nav class="nav-recipe">
 {% else %}
 <nav>
 {% endif %}
-
-    <figure>
-        <img alt="Logo" src="/{{ globals.logo.one().url }}" />
-    </figure>
-    {% if entry.section == 'Recipes' %}
-        <a href="/">Back to all recipes</a>
-    {% endif %}
+{% if entry.section == 'Recipes' %}
+    <a href="/"><span></span> Back to all recipes</a>
+{% endif %}
+<figure>
+    <img v-on:click="goHome" alt="Logo" src="/{{ globals.logo.one().url }}" />
+</figure>
 </nav>

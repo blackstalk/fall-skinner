@@ -4,7 +4,7 @@ const dev = require("./webpack.dev.js")
 
 module.exports = merge(dev, {
   devServer: {
-    host: "https://fall.noyolks.test/",
+    host: "https://fall.ronzoni.test/",
     port: 8080,
     headers: {
       "Access-Control-Allow-Origin": "*"

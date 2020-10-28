@@ -6,3 +6,10 @@
 @mixin mediaMaxWidth($max) {
     @media (max-width: $max + 'px') { @content; }
 }
+
+@mixin rubik {
+    font-family: "Rubik";
+}
+@mixin foodTruck {
+    font-family: "FoodTruckChalkboard";
+}

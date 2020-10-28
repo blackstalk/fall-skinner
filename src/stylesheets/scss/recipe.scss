@@ -10,6 +10,7 @@ section.recipe-hero {
     }
     .hero-left {
         width: 50%;
+        max-height: 600px;
         background-size: cover;
         background-position: center center;
         @include mediaMaxWidth(800){
@@ -26,43 +27,74 @@ section.recipe-hero {
     .hero-right {
         width: 50%;
         position: relative;
+        margin-top: 100px;
         @include mediaMaxWidth(800){
             width: 100%;
+            margin-top: 15px;
         }
         .hero-right--inner {
             padding: 30px;
+            .mobile-back {
+                display: none;
+                @include rubik;
+                color: #E2A427;
+                text-transform: uppercase;
+                font-size: 14px;
+                margin-bottom: 15px;
+                span {
+                    display: inline-block;
+                    margin-right: 8px;
+                    height: 20px;
+                    margin-bottom: -5px;
+                    width: 20px;
+                    background-size: contain;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNy41IiBoZWlnaHQ9IjE3LjUiIHZpZXdCb3g9IjAgMCAxNy41IDE3LjUiPgogIDxnIGlkPSJJY29uX2ZlYXRoZXItYXJyb3ctdXAtY2lyY2xlIiBkYXRhLW5hbWU9Ikljb24gZmVhdGhlci1hcnJvdy11cC1jaXJjbGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuNSAxNykgcm90YXRlKC05MCkiPgogICAgPHBhdGggaWQ9IlBhdGhfMzk1MiIgZGF0YS1uYW1lPSJQYXRoIDM5NTIiIGQ9Ik0xNi41LDguMjVBOC4yNSw4LjI1LDAsMSwxLDguMjUsMCw4LjI1LDguMjUsMCwwLDEsMTYuNSw4LjI1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJhNDI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHBhdGggaWQ9IlBhdGhfMzk1MyIgZGF0YS1uYW1lPSJQYXRoIDM5NTMiIGQ9Ik02LjYsMy4zLDMuMywwLDAsMy4zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0Ljk1IDQuOTUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNlMmE0MjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8zOTU0IiBkYXRhLW5hbWU9IlBhdGggMzk1NCIgZD0iTTAsNi42VjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDguMjUgNC45NSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UyYTQyNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8L2c+Cjwvc3ZnPgo=");
+                }
+                @include mediaMaxWidth(800){
+                    display: block;
+                }
+            }
             h1 {
-                color: #f5ba19;
-                font-family: "MerriweatherBold";
+                color: black;
+                @include rubik;
                 font-size: 30px;
+                font-weight: 900;
             }
             p {
                 font-size: 16px;
-                color: white;
-                font-family: "SpartanRegular";
+                color: black;
+                @include rubik;
                 margin: 30px 0;
             }
             button {
-                display: flex;
-                background-size: contain;
-                background-repeat: repeat;
-                color: black;
-                font-size: 12px;
-                font-family: "SpartanBold";
-                padding: 5px 20px;
-                text-transform: uppercase;
-                border: 0;
-                align-items: center;
-                justify-content: center;
-                margin-bottom: 25px;
-                cursor: pointer;
+                margin-top: 0px;
+                margin-bottom: 20px;
+                border: 0px;
+                background-color: #FED945;
+                border-radius: 5px;
+                @include box-shadow;
+                font-size: 16px;
+                font-weight: bold;
+                padding: 5px 30px 10px;
+                @include rubik;
+                color:#000;
                 outline: 0;
+                cursor: pointer;
+                transition: .3s ease all;
                 span {
                     margin-right: 10px;
+                    position: relative;
+                    bottom: -5px;
+                }
+                &:hover {
+                    background-color: #fff;
                 }
             }
             .hero-right--info {
-                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                margin-top: 20px;
+                border-top: 1px solid rgba(0,0,0, 0.3);
                 padding-top: 25px;
                 ul {
                     list-style-type: none;
@@ -89,7 +121,7 @@ section.recipe-hero {
                             height: 50%;
                             bottom: 0;
                             right: 0;
-                            background-color: rgba(255, 255, 255, 0.5);
+                            background-color: rgba(0,0,0, 0.3);
                             @include mediaMaxWidth(500){
                                 display: none;
                             }
@@ -126,10 +158,11 @@ section.recipe-hero {
                             }
                         }
                         .info-label {
-                            font-family: "SpartanSemiBold";
+                            @include rubik;
                             display: block;
-                            color: white;
+                            color: black;
                             margin: 15px 0;
+                            font-weight: bolder;
                             @include mediaMaxWidth(1200){
                                 font-size: 13px;
                                 margin: 5px;
@@ -139,9 +172,9 @@ section.recipe-hero {
                             }
                         }
                         .info-value {
-                            font-family: "SpartanRegular";
+                            @include rubik;
                             display: block;
-                            color: white;
+                            color: black;
                             @include mediaMaxWidth(1200){
                                 font-size: 13px;
                             }
@@ -164,6 +197,9 @@ section.body {
     display: flex;
     flex-wrap: nowrap;
     padding-top: 40px;
+    @include mediaMaxWidth(800){
+        padding-top: 0;
+    }    
     @include mediaMaxWidth(500){
         flex-wrap: wrap-reverse;
     }
@@ -180,9 +216,16 @@ section.body {
 
             h2 {
                 color: #272727;
-                font-family: "MerriweatherHeavy";
-                font-size: 20px;
-                margin-bottom: 25px;
+                @include foodTruck;
+                font-size: 35px;
+                margin-bottom: 5px;
+            }
+            .body-left--hr {
+                height: 30px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left center;
+                width: 100%;
             }
         }
         .body-left--instructions {
@@ -198,12 +241,13 @@ section.body {
                     position: relative;
                     counter-increment: inst;
                     border-top: 1px solid rgba(0,0,0, 0.1);
-                    font-family: "SpartanRegular";
-                    color: #272727;
+                    @include rubik;
+                    color: black;
                     &:before {
                         content: counter(inst);
-                        color: #F4801F;
-                        font-family: "MerriweatherBold";
+                        color: #FFAB00;
+                        @include rubik;
+                        font-weight: bolder;
                         font-size: 1em;
                         top: -30px;
                         
@@ -230,12 +274,12 @@ section.body {
             margin-top: 20px;
             padding-top: 30px;
             h3 {
-                font-size: 20px;
-                font-family: "MerriweatherBold";
+                font-size: 35px;
+                @include foodTruck;
             }
             p {
                 color: #272727;
-                font-family: "SpartanRegular";
+                @include rubik;
                 font-size: 23px;
                 display: block;
                 max-width: 500px;
@@ -251,10 +295,17 @@ section.body {
         }
         .body-right--heading {
             h2 {
-                color: #272727;
-                font-family: "MerriweatherHeavy";
-                font-size: 20px;
-                margin-bottom: 25px;
+                color: black;
+                @include foodTruck;
+                font-size: 35px;
+                margin-bottom: 5px;
+            }
+            .body-right--hr {
+                height: 30px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left center;
+                width: 100%;
             }
             a {
                 display: block;
@@ -267,20 +318,32 @@ section.body {
                     padding: 0 10px;
                     max-width: 80%;
                     @include mediaMaxWidth(500){
-                        max-width: 250px;
+                        max-width: -webkit-fill-available;
                     }
                 }
                 label {
                     display: block;
                     width: 100%;
-                    color: #666666;
-                    font-family: "MerriweatherBold";
+                    color: black;
+                    @include rubik;
+                    font-weight: bolder;
                     font-size: 20px;
                     cursor: pointer;
                     margin-top: 15px;
                 }
             }
         }
+        .body-right--product {
+            .body-right--product-hr {
+                height: 30px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: left center;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+        
         .body-right--ingredients {
             ul {
                 list-style-type: none;
@@ -290,7 +353,7 @@ section.body {
                     padding-top: 15px;
                     padding-bottom: 10px;
                     color: #4E4E4E;
-                    font-family: "SpartanRegular";
+                    @include rubik;
                     font-size: 14px;
                     border-bottom: 1px solid rgba(0,0,0, 0.1);
                     &:last-child {
@@ -302,12 +365,23 @@ section.body {
     }
 }
 section.yellow-bar {
+    margin-top: 30px;
     width: 100%;
     position: relative;
     padding: 35px 20px 30px;
-    background-size: contain;
-    background-repeat: repeat;
     text-align: center;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100px;
+    &:before {
+        position: absolute;
+        width: 100%;
+        content: '';
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(255,171,0,0.5);
+    }
     @include mediaMaxWidth(800){
         margin-top: 30px;
     }
@@ -344,6 +418,7 @@ section.yellow-bar {
     section.recipe-hero .hero-left figure img
     {
         visibility: visible;
+        max-height: 200px;
     }
     nav.dark-nav {
         position: absolute;
