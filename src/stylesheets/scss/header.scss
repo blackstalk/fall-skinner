@@ -5,7 +5,7 @@ nav {
     padding: 15px 30px;
     z-index: 99;
     text-align: right;
-    @include mediaMaxWidth(800) {
+    @include mediaMaxWidth(900) {
         text-align: center;
     }
     @include mediaMaxWidth(500){
@@ -21,8 +21,12 @@ nav {
     &.nav-recipe {
         width: 50%;
         right: 0;
+        @include mediaMaxWidth(900) {
+            text-align: right;
+        }
         @include mediaMaxWidth(800){
             width: 100%;
+            text-align: center;
         }
         a {
             @include rubik;
@@ -47,6 +51,15 @@ nav {
                 background-position: center center;
                 background-repeat: no-repeat;
                 background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNy41IiBoZWlnaHQ9IjE3LjUiIHZpZXdCb3g9IjAgMCAxNy41IDE3LjUiPgogIDxnIGlkPSJJY29uX2ZlYXRoZXItYXJyb3ctdXAtY2lyY2xlIiBkYXRhLW5hbWU9Ikljb24gZmVhdGhlci1hcnJvdy11cC1jaXJjbGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAuNSAxNykgcm90YXRlKC05MCkiPgogICAgPHBhdGggaWQ9IlBhdGhfMzk1MiIgZGF0YS1uYW1lPSJQYXRoIDM5NTIiIGQ9Ik0xNi41LDguMjVBOC4yNSw4LjI1LDAsMSwxLDguMjUsMCw4LjI1LDguMjUsMCwwLDEsMTYuNSw4LjI1WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTJhNDI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMSIvPgogICAgPHBhdGggaWQ9IlBhdGhfMzk1MyIgZGF0YS1uYW1lPSJQYXRoIDM5NTMiIGQ9Ik02LjYsMy4zLDMuMywwLDAsMy4zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0Ljk1IDQuOTUpIiBmaWxsPSJub25lIiBzdHJva2U9IiNlMmE0MjciIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgICA8cGF0aCBpZD0iUGF0aF8zOTU0IiBkYXRhLW5hbWU9IlBhdGggMzk1NCIgZD0iTTAsNi42VjAiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDguMjUgNC45NSkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UyYTQyNyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEiLz4KICA8L2c+Cjwvc3ZnPgo=");
+            }
+            @include mediaMaxWidth(900){
+                font-size: 11px;
+                span {
+                    height: 15px;
+                    margin-bottom: -4px;
+                    width: 15px;
+                    margin-right: 0px;
+                }
             }
         }
     }

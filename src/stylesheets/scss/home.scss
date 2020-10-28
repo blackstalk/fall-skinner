@@ -2,35 +2,58 @@ section.hero {
     position: relative;
     .hero-dish-image {
         position: absolute;
-        right: -50px;
+        left: 0;
         top: 0;
         @include mediaMaxWidth(900) {
-            transform: scale(-1) rotate(-90deg);
+            transform: scale(-1);
             right: -20px;
             top: auto;
-            bottom: 70px;
-        }
-        @include mediaMaxWidth(767) {
-            display: none;
+            bottom: 100px;
         }
         img {
             width: 100%;
-            max-width: 500px;
+            max-width: 1120px;
             @include mediaMaxWidth(900) {
-                max-width: 310px;
+                max-width: 560px;
             }
         }
         
     }
+    .hero-top-copy--product {
+        width: 40%;
+        position: absolute;
+        left: 30px;
+        bottom: 130px;
+        @include mediaMaxWidth(500) {
+            width: 100%;
+            left: -20px;
+            bottom: 100px;
+        }
+        img {
+            width: 100%;
+            max-width: 350px;
+            @include mediaMaxWidth(900) {
+                max-width: 210px;
+            }
+            @include mediaMaxWidth(500) {
+                max-width: 210px;
+            }
+        }
+    }
     .hero-top {
         width: 100%;
         background-size: cover;
+        display: flex;
+        justify-content: flex-end;
+        background-position: bottom center;
         .hero-top-inner {
             width: 100%;
             max-width: 700px;
-            margin-left: 40px;
             text-align: center;
-            padding-top: 30px;
+            padding-top: 70px;
+            padding-bottom: 30px;
+            position: relative;
+            z-index: 1;
             @include mediaMaxWidth(1100) {
                 max-width: 520px;
             }
@@ -58,8 +81,9 @@ section.hero {
             }
             .hero-top-copy {
                 width: 100%;
-                display: flex;
                 margin-top: 30px;
+                max-width: 500px;
+                margin: 0 auto;
                 @include mediaMaxWidth(900) {
                     max-width: 500px;
                     margin: auto;
@@ -67,21 +91,37 @@ section.hero {
                 @include mediaMaxWidth(500) {
                     flex-direction: column;
                 }
-                .hero-top-copy--product {
-                    width: 40%;
-                    @include mediaMaxWidth(500) {
-                        width: 100%;
+                .hero-middle-button {
+                    text-align: left;
+                    @include mediaMaxWidth(1100) {
+
                     }
-                    img {
-                        width: 100%;
-                        @include mediaMaxWidth(500) {
-                            max-width: 250px;
+                    @include mediaMaxWidth(900) {
+                        margin: 0 auto;
+                        text-align: center;
+                    }
+                    button {
+                        margin-top: 20px;
+                        border: 0px;
+                        background-color: #FED945;
+                        border-radius: 5px;
+                        @include box-shadow;
+                        font-size: 16px;
+                        font-weight: bold;
+                        padding: 10px 30px;
+                        @include rubik;
+                        color:#000;
+                        outline: 0;
+                        cursor: pointer;
+                        transition: .3s ease all;
+                        &:hover {
+                            background-color: white;
                         }
                     }
                 }
                 .hero-top-copy--copy {
                     text-align: left;
-                    width: 60%;
+                    width: 100%;
                     @include mediaMaxWidth(500) {
                         width: 100%;
                         margin-top: 25px;
@@ -99,46 +139,20 @@ section.hero {
         }
     }
     .hero-middle {
-        background-color: #0087D4;
-        min-height: 130px;
-        margin-top: -70px;
+        clear: both;
+        background: rgb(6,70,49);
+        background: linear-gradient(180deg, rgba(6,70,49,1) 0%, rgba(126,188,67,1) 100%);
+        min-height: 100px;
         @include mediaMaxWidth(1100) {
             margin-top: 0px;
         }
         @include mediaMaxWidth(900) {
             min-height: 180px;
         }
-        @include mediaMaxWidth(767) {
-            min-height: 80px;
+        @include mediaMaxWidth(650) {
+            min-height: 250px;
         }
-        .hero-middle-button {
-            margin-left: 320px;
-            @include mediaMaxWidth(1100) {
-                margin-left: 250px;
-            }
-            @include mediaMaxWidth(900) {
-                margin: 0 auto;
-                text-align: center;
-            }
-            button {
-                margin-top: 20px;
-                border: 0px;
-                background-color: #FED945;
-                border-radius: 5px;
-                @include box-shadow;
-                font-size: 16px;
-                font-weight: bold;
-                padding: 10px 30px;
-                @include rubik;
-                color:#000;
-                outline: 0;
-                cursor: pointer;
-                transition: .3s ease all;
-                &:hover {
-                    background-color: white;
-                }
-            }
-        }
+        
     }
     .hero-bottom {
         min-height: 100px;
@@ -207,7 +221,7 @@ section.recipes {
     .recipe-bottom-right {
         position: absolute;
         right: 0;
-        bottom: 10px;
+        bottom: -20px;
         max-width: 300px;
         width: 100%;
         @include mediaMaxWidth(1200) {
@@ -264,18 +278,24 @@ section.recipes {
                 background-color: #F0F0F0;
                 transition: .3s ease all;
                 &:nth-child(even){
-                    background-color: #F5BA19;
+                    background-color: #257D57;
+                    .recipe-outer .recipe-item .recipe-info a {
+                        color: white;
+                    }
+                    .recipe-outer .recipe-item .recipe-info p {
+                        color: white;
+                    }
                 }
                 &:hover {
                     @include box-shadow;
-                    .recipe-outer {
-                        .recipe-item {
-                            width: 100%;
-                            .recipe-img {
-                                background-size: 105%;
-                            }
-                        }
-                    }
+                    // .recipe-outer {
+                    //     .recipe-item {
+                    //         width: 100%;
+                    //         .recipe-img {
+                    //             background-size: 105%;
+                    //         }
+                    //     }
+                    // }
                 }
                 @include mediaMaxWidth(750) {
                     width: calc(50% - 20px);
@@ -383,7 +403,7 @@ section.products {
             justify-content: space-between;
             gap: 20px;
             .product-col {
-                width: calc(20% - 20px);
+                width: calc(25% - 20px);
                 background-size: cover;
                 margin: 0 auto;
                 margin-top: 10px;

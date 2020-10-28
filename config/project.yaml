@@ -1,4 +1,4 @@
-dateModified: 1603756575
+dateModified: 1603852816
 email:
   fromEmail: philipp@rppld.co
   fromName: 'Craft CMS Project Starter'
@@ -1030,6 +1030,11 @@ globalSets:
             sortOrder: 2
     handle: globals
     name: Globals
+graphql:
+  schemas:
+    fcb8e827-0ad5-4474-a2bf-1753201c14bd:
+      isPublic: true
+      name: 'Public Schema'
 plugins:
   cookies:
     edition: standard
@@ -1291,17 +1296,17 @@ siteGroups:
 sites:
   aebac91c-fff6-4f09-b5d1-72694fe08a75:
     baseUrl: $DEFAULT_SITE_URL
-    handle: ronzoni
+    handle: creamette
     hasUrls: true
     language: en
-    name: Ronzoni
+    name: Creamette
     primary: true
     siteGroup: a0059ff2-95fa-4b45-9b83-d33adaccc6e4
     sortOrder: 1
 system:
   edition: pro
   live: true
-  name: 'Ronzoni Mac & Cheese'
+  name: 'Creamette Mac & Cheese'
   schemaVersion: 3.4.10
   timeZone: America/Chicago
 users:

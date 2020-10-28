@@ -23,27 +23,26 @@
 	<div class="hero-dish-image">
 		<img src="{{ entry.heroDishImage.one().url }}" />
 	</div>
+	<div class="hero-top-copy--product">
+		<img alt="Product" src="{{ entry.heroProductImage.one().url }}" />
+	</div>
 	<div class="hero-top" style="background-image:url({{ entry.heroBackgroundImage.one().url }})">
 		<div class="hero-top-inner">
 			<div class="hero-top-title">
 				<img alt="Dish out the delish" src="{{ entry.heroHeadingImage.one().url }}" />
 			</div>
-			<div class="hero-top-hr hr-style-1"></div>
+			{# <div class="hero-top-hr hr-style-1"></div> #}
 			<div class="hero-top-copy">
-				<div class="hero-top-copy--product">
-					<img alt="Product" src="{{ entry.heroProductImage.one().url }}" />
-				</div>
 				<div class="hero-top-copy--copy">
 					{{ entry.heroTopParagraph }}
+				</div>
+				<div class="hero-middle-button">
+					<button v-on:click="scrollToRecipes">See Recipes Below</button>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="hero-middle">
-		<div class="hero-middle-button">
-			<button v-on:click="scrollToRecipes">See Recipes Below</button>
-		</div>
-	</div>
+	<div class="hero-middle"></div>
 	<div class="hero-bottom" style="background-image:url({{ entry.headerBarBackgroundImage.one().url }})">
 		<figure>
 			<img alt="Mac and Cheese, Your Way" src="{{ entry.headerBarSupportingImage.one().url }}" />
