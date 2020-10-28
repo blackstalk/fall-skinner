@@ -5,35 +5,49 @@ section.hero {
         left: 0;
         top: 0;
         @include mediaMaxWidth(900) {
-            transform: scale(-1);
-            right: -20px;
+            transform: scaleY(-1);
+            right: 0px;
             top: auto;
             bottom: 100px;
         }
         img {
             width: 100%;
             max-width: 1120px;
+            @include mediaMaxWidth(1500) {
+                max-width: 800px;
+            }
+            @include mediaMaxWidth(1200) {
+                max-width: 600px;
+            }
             @include mediaMaxWidth(900) {
-                max-width: 560px;
+                max-width: 470px;
+            }
+            @include mediaMaxWidth(500) {
+                max-width: 270px;
             }
         }
         
     }
     .hero-top-copy--product {
-        width: 40%;
+        width: auto;
         position: absolute;
-        left: 30px;
-        bottom: 130px;
+        right: 30px;
+        bottom: 88px;
+        @include mediaMaxWidth(600) {
+            bottom: 60px;
+            right: 10px;
+        }
         @include mediaMaxWidth(500) {
-            width: 100%;
-            left: -20px;
-            bottom: 100px;
+            right: -10px;
         }
         img {
             width: 100%;
-            max-width: 350px;
+            max-width: 400px;
+            @include mediaMaxWidth(1300) {
+                max-width: 310px
+            }
             @include mediaMaxWidth(900) {
-                max-width: 210px;
+                max-width: 300px;
             }
             @include mediaMaxWidth(500) {
                 max-width: 210px;
@@ -44,7 +58,7 @@ section.hero {
         width: 100%;
         background-size: cover;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
         background-position: bottom center;
         .hero-top-inner {
             width: 100%;
@@ -61,6 +75,9 @@ section.hero {
                 max-width: 100%;
                 padding: 40px;
                 margin: 0;
+            }
+            @include mediaMaxWidth(500) {
+                padding-top: 90px;
             }
             .hero-top-title {
                 @include mediaMaxWidth(900) {
@@ -81,7 +98,8 @@ section.hero {
             }
             .hero-top-copy {
                 width: 100%;
-                margin-top: 30px;
+                position: relative;
+                top: -60px;
                 max-width: 500px;
                 margin: 0 auto;
                 @include mediaMaxWidth(900) {
@@ -92,7 +110,7 @@ section.hero {
                     flex-direction: column;
                 }
                 .hero-middle-button {
-                    text-align: left;
+                    text-align: center;
                     @include mediaMaxWidth(1100) {
 
                     }
@@ -140,17 +158,16 @@ section.hero {
     }
     .hero-middle {
         clear: both;
-        background: rgb(6,70,49);
-        background: linear-gradient(180deg, rgba(6,70,49,1) 0%, rgba(126,188,67,1) 100%);
-        min-height: 100px;
+        background: #062F87;
+        min-height: 80px;
         @include mediaMaxWidth(1100) {
             margin-top: 0px;
         }
         @include mediaMaxWidth(900) {
-            min-height: 180px;
+            min-height: 80px;
         }
         @include mediaMaxWidth(650) {
-            min-height: 250px;
+            min-height: 80px;
         }
         
     }
@@ -205,14 +222,15 @@ section.recipes {
     }
     .recipe-bottom-left {
         position: absolute;
-        left: 0;
+        left: -90px;
         bottom: 10px;
-        max-width: 300px;
+        max-width: 520px;
         width: 100%;
         @include mediaMaxWidth(1200) {
             position: relative;
             width: 50%;
             float: left;
+            left: 0;
         }
         img {
             width: 100%;
@@ -222,7 +240,7 @@ section.recipes {
         position: absolute;
         right: 0;
         bottom: -20px;
-        max-width: 300px;
+        max-width: 380px;
         width: 100%;
         @include mediaMaxWidth(1200) {
             position: relative;
@@ -278,7 +296,7 @@ section.recipes {
                 background-color: #F0F0F0;
                 transition: .3s ease all;
                 &:nth-child(even){
-                    background-color: #257D57;
+                    background-color: #1A3F98;
                     .recipe-outer .recipe-item .recipe-info a {
                         color: white;
                     }

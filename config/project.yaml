@@ -1,4 +1,4 @@
-dateModified: 1603852816
+dateModified: 1603916403
 email:
   fromEmail: philipp@rppld.co
   fromName: 'Craft CMS Project Starter'
@@ -1296,17 +1296,17 @@ siteGroups:
 sites:
   aebac91c-fff6-4f09-b5d1-72694fe08a75:
     baseUrl: $DEFAULT_SITE_URL
-    handle: creamette
+    handle: skinner
     hasUrls: true
     language: en
-    name: Creamette
+    name: Skinner
     primary: true
     siteGroup: a0059ff2-95fa-4b45-9b83-d33adaccc6e4
     sortOrder: 1
 system:
   edition: pro
   live: true
-  name: 'Creamette Mac & Cheese'
+  name: 'Skinner Mac & Cheese'
   schemaVersion: 3.4.10
   timeZone: America/Chicago
 users:
