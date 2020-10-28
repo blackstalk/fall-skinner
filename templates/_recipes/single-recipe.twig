@@ -39,6 +39,11 @@
         </div>
     </div>
 </section>
+
+{% if entry.longDescription is not empty %}
+<section class="long-description">{{entry.longDescription}}</section>
+{% endif %}
+
 <section class="body">
     <div class="body-left">
         <div class="body-left--heading">

@@ -188,7 +188,16 @@ section.recipe-hero {
         }
     }
 }
-
+section.long-description {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 45px 25px 0;
+    font-size: 17px;
+    color: black;
+    @include rubik;
+    text-align: left;
+    font-weight: bolder;
+}
 section.body {
     max-width: 1400px;
     width: 100%;
@@ -196,7 +205,7 @@ section.body {
     position: relative;
     display: flex;
     flex-wrap: nowrap;
-    padding-top: 40px;
+    padding-top: 20px;
     @include mediaMaxWidth(800){
         padding-top: 0;
     }    
