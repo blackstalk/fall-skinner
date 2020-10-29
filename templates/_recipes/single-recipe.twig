@@ -53,10 +53,12 @@
         <div class="body-left--instructions">
             {{ entry.instructions }}
         </div>
+        {% if entry.recipeTip is not empty %}
         <div class="body-left--tip">
             <h3>- Tip -</h3>
             <p>{{ entry.recipeTip|raw }}</p>
         </div>
+        {% endif %}
     </div>
     <div class="body-right">
         <div class="body-right--heading">
